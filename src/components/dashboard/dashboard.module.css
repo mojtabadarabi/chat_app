@@ -13,12 +13,6 @@
     border: 1px solid crimson;
 }
 
-.chat{
-    flex-basis: 50%;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-}
 .chatInfo{
     flex-basis: 25%;
     display: flex;

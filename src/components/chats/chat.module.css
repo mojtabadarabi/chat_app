@@ -1,0 +1,32 @@
+
+.chatContainer{
+    flex-basis: 50%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 2px solid #F5F5F5;
+}
+.header:nth-child(1) {
+    margin-left: 15px;
+}
+.header:nth-child(1) span{
+   opacity: .7;
+   font-weight: 800;
+    margin-right: auto;
+}
+.header:nth-child(1) button{
+    border: none;
+    background-color: #C065DC;
+    padding: 10px;
+    margin: auto 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #fff;
+    
+}
