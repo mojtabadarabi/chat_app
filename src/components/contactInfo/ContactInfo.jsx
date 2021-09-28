@@ -4,7 +4,10 @@ import avatar from '../../images/avatar.png'
 import {FiSmartphone} from 'react-icons/fi'
 import {MdEmail} from 'react-icons/md'
 
+import { useContextActions } from '../../context/ContextProvider'
+
 function ContactInfo() {
+
     return (
         <section className={style.contactInfoContainer}>
                 <img src={avatar} alt="avatar" className={style.avatar}/>
@@ -21,6 +24,7 @@ function ContactInfo() {
                         <span>mj.darabi113@gmail.com</span>
                     </div>
                 </div>
+
         </section>
     )
 }

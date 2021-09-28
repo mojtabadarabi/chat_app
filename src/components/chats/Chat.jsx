@@ -4,10 +4,10 @@ import ChatBody from "./chatbody/ChatBody";
 import ChatContainer from "./ChatContainer";
 import NewMessage from "./newmessage/NewMessage";
 
-function Chat() {
+function Chat({avatar}) {
   return (
-      <ChatContainer>
-          <ChatBody/>
+      <ChatContainer >
+          <ChatBody />
           <NewMessage/>
       </ChatContainer>
 

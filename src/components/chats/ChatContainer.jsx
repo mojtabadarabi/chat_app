@@ -4,8 +4,10 @@ import { FiPhone } from "react-icons/fi";
 import { FiVideo } from "react-icons/fi";
 import avatar from '../../images/avatar.png'
 import '../../app.css'
+import { useContextActions } from '../../context/ContextProvider';
 
 function ChatContainer({children}) {
+    const dispatch = useContextActions()
     return (
         <section className={style.chatContainer}>
             <header className={style.header}>
@@ -15,8 +17,8 @@ function ChatContainer({children}) {
                     <span>online</span>
                 </div>
                 <div>
-                    <button>
-                        <FiPhone/>
+                    <button >
+                        <FiPhone />
                     </button>
                     <button>
                         <FiVideo/>
