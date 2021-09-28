@@ -6,10 +6,11 @@ import NewMessage from "./newmessage/NewMessage";
 
 function Chat() {
   return (
-    <ChatContainer>
-        <ChatBody/>
-        <NewMessage/>
-    </ChatContainer>
+      <ChatContainer>
+          <ChatBody/>
+          <NewMessage/>
+      </ChatContainer>
+
 
   )
 }

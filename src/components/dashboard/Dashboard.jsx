@@ -1,5 +1,6 @@
 import React from 'react'
 import Chat from '../chats/Chat'
+import ContactInfo from '../contactInfo/ContactInfo'
 import Contacts from '../contacts/Contacts'
 import style from './dashboard.module.css'
 
@@ -8,9 +9,7 @@ function Dashboard() {
         <div className={style.container}>
             <Contacts/>
             <Chat/>
-            <section className={`${style.chatInfo} ${style.col}`}>
-                contacts
-            </section>
+            <ContactInfo/>
         </div>
     )
 }

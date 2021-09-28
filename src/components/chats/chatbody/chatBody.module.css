@@ -1,0 +1,35 @@
+.message{
+    padding: 5px;
+
+    width: 80%;
+    margin:  25px;
+    display: flex;
+    border-radius: 8px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+.chatContainer{
+    overflow-y: auto;
+}
+.contactMessage{
+    text-align: left;
+    direction: ltr;
+    margin-right: auto;
+    background-color: #f5f5f5;
+}
+.userMessage{
+    text-align: right;
+    direction: rtl;
+    margin-left: auto;
+    background-color: #C065DC;
+    color: #f5f5f5;
+    border-radius: 8px;
+    text-align: left;
+}
+.message img{
+    margin-right: auto;
+    
+}
+.message div p{
+    margin: 10px 15px;
+}

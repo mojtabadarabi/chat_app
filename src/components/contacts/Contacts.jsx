@@ -1,7 +1,6 @@
 import React from 'react'
 import style from './contacts.module.css'
-import avatar from '../../images/avatar.png'
-import '../../app.css'
+import Contact from './Contact'
 
 function Contacts() {
     return (
@@ -11,147 +10,15 @@ function Contacts() {
                 <div><input type="text" placeholder='Search Chat'/></div>
             </header>
             <ul>
-                <li className={style.cotactContainer}>
-                    <img className='avatar' src={avatar} alt="avatar" />
-                    <div className={style.infoContainer} >
-                        <div className={style.info}>
-                            <span>cotact name</span>
-                            <span>last seen</span>
-                        </div>
-                        <span className={style.time} >12:05AM</span>
-                    </div>
-                </li>
-                <li className={style.cotactContainer}>
-                    <img className={style.avatar} src={avatar} alt="avatar" />
-                    <div className={style.infoContainer} >
-                        <div className={style.info}>
-                            <span>cotact name</span>
-                            <span>last seen</span>
-                        </div>
-                        <span className={style.time} >12:05AM</span>
-                    </div>
-                </li>
-                <li className={style.cotactContainer}>
-                    <img className={style.avatar} src={avatar} alt="avatar" />
-                    <div className={style.infoContainer} >
-                        <div className={style.info}>
-                            <span>cotact name</span>
-                            <span>last seen</span>
-                        </div>
-                        <span className={style.time} >12:05AM</span>
-                    </div>
-                </li>
-                <li className={style.cotactContainer}>
-                    <img className={style.avatar} src={avatar} alt="avatar" />
-                    <div className={style.infoContainer} >
-                        <div className={style.info}>
-                            <span>cotact name</span>
-                            <span>last seen</span>
-                        </div>
-                        <span className={style.time} >12:05AM</span>
-                    </div>
-                </li>
-                <li className={style.cotactContainer}>
-                    <img className={style.avatar} src={avatar} alt="avatar" />
-                    <div className={style.infoContainer} >
-                        <div className={style.info}>
-                            <span>cotact name</span>
-                            <span>last seen</span>
-                        </div>
-                        <span className={style.time} >12:05AM</span>
-                    </div>
-                </li>
-                <li className={style.cotactContainer}>
-                    <img className={style.avatar} src={avatar} alt="avatar" />
-                    <div className={style.infoContainer} >
-                        <div className={style.info}>
-                            <span>cotact name</span>
-                            <span>last seen</span>
-                        </div>
-                        <span className={style.time} >12:05AM</span>
-                    </div>
-                </li>
-                <li className={style.cotactContainer}>
-                    <img className={style.avatar} src={avatar} alt="avatar" />
-                    <div className={style.infoContainer} >
-                        <div className={style.info}>
-                            <span>cotact name</span>
-                            <span>last seen</span>
-                        </div>
-                        <span className={style.time} >12:05AM</span>
-                    </div>
-                </li>
-                <li className={style.cotactContainer}>
-                    <img className={style.avatar} src={avatar} alt="avatar" />
-                    <div className={style.infoContainer} >
-                        <div className={style.info}>
-                            <span>cotact name</span>
-                            <span>last seen</span>
-                        </div>
-                        <span className={style.time} >12:05AM</span>
-                    </div>
-                </li>
-                <li className={style.cotactContainer}>
-                    <img className={style.avatar} src={avatar} alt="avatar" />
-                    <div className={style.infoContainer} >
-                        <div className={style.info}>
-                            <span>cotact name</span>
-                            <span>last seen</span>
-                        </div>
-                        <span className={style.time} >12:05AM</span>
-                    </div>
-                </li>
-                <li className={style.cotactContainer}>
-                    <img className={style.avatar} src={avatar} alt="avatar" />
-                    <div className={style.infoContainer} >
-                        <div className={style.info}>
-                            <span>cotact name</span>
-                            <span>last seen</span>
-                        </div>
-                        <span className={style.time} >12:05AM</span>
-                    </div>
-                </li>
-                <li className={style.cotactContainer}>
-                    <img className={style.avatar} src={avatar} alt="avatar" />
-                    <div className={style.infoContainer} >
-                        <div className={style.info}>
-                            <span>cotact name</span>
-                            <span>last seen</span>
-                        </div>
-                        <span className={style.time} >12:05AM</span>
-                    </div>
-                </li>
-                <li className={style.cotactContainer}>
-                    <img className={style.avatar} src={avatar} alt="avatar" />
-                    <div className={style.infoContainer} >
-                        <div className={style.info}>
-                            <span>cotact name</span>
-                            <span>last seen</span>
-                        </div>
-                        <span className={style.time} >12:05AM</span>
-                    </div>
-                </li>
-                <li className={style.cotactContainer}>
-                    <img className={style.avatar} src={avatar} alt="avatar" />
-                    <div className={style.infoContainer} >
-                        <div className={style.info}>
-                            <span>cotact name</span>
-                            <span>last seen</span>
-                        </div>
-                        <span className={style.time} >12:05AM</span>
-                    </div>
-                </li>
-                <li className={style.cotactContainer}>
-                    <img className={style.avatar} src={avatar} alt="avatar" />
-                    <div className={style.infoContainer} >
-                        <div className={style.info}>
-                            <span>cotact name</span>
-                            <span>last seen</span>
-                        </div>
-                        <span className={style.time} >12:05AM</span>
-                    </div>
-                </li>
-               
+                <Contact name='contact name' seen='last seen' time='12:05AM'/>
+                <Contact name='contact name' seen='last seen' time='12:05AM'/>
+                <Contact name='contact name' seen='last seen' time='12:05AM'/>
+                <Contact name='contact name' seen='last seen' time='12:05AM'/>
+                <Contact name='contact name' seen='last seen' time='12:05AM'/>
+                <Contact name='contact name' seen='last seen' time='12:05AM'/>
+                <Contact name='contact name' seen='last seen' time='12:05AM'/>
+                <Contact name='contact name' seen='last seen' time='12:05AM'/>
+                <Contact name='contact name' seen='last seen' time='12:05AM'/>
             </ul>
         </section>
     )

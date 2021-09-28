@@ -1,10 +1,18 @@
 import React from 'react'
 import style from './newmessage.module.css'
+import { GrAttachment } from "react-icons/gr";
+import { GrSend } from "react-icons/gr";
 
 function NewMessage() {
     return (
         <div className={style.newMessageContainer}>
-            <input type="text" placeholder='message' />
+            <textarea  placeholder="Message" ></textarea>
+            <button className={style.button} >
+                <GrAttachment/>
+            </button>
+            <button className={style.button}>
+                <GrSend/>
+            </button>
         </div>
     )
 }
