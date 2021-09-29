@@ -9,7 +9,7 @@ import { useContextActions } from '../../context/ContextProvider';
 function ChatContainer({children}) {
     const dispatch = useContextActions()
     return (
-        <section className={style.chatContainer}>
+        <section className={style.chatContainer} >
             <header className={style.header}>
                 <img src={avatar} alt="avatar" className='avatar'/>
                 <div>

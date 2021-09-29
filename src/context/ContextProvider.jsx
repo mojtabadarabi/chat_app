@@ -6,9 +6,14 @@ const reducer =(state,action)=>{
             localStorage.setItem('token','241g5as4g5ad1g2a4dg5ad4g1a2dg4ad5gadg')
             return {...state,user:action.user,isAuthenticated:true}
         case "logout":
+            localStorage.clear()
             return {...state,user:{},isAuthenticated:false}
         case 'authenticate':
             return {...state,isAuthenticated:true}
+        case 'newmessage':
+            const messagesArray=[...state.messages]
+            messagesArray.push(action.message)
+            return {...state,messages:messagesArray}
         default:
             return state;
     }
@@ -17,7 +22,8 @@ const context = createContext();
 const contextDispatcer = createContext();
 const initialState={
     isAuthenticated:false,
-    user:{}
+    user:{},
+    messages:[]
 }
 
 function ContextProvider({children}) {

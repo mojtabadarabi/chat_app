@@ -16,7 +16,13 @@ function LoginPage({history}) {
         }
         if (name!==''&&name!==' '&&lastName!==''&&setlastName!==' ') {
             dispatch({type:'login',user})
-            history.replace('/')
+            history.replace({
+                pathname:"/",
+                state:{
+                    name,
+                    lastName
+                }
+            })
         }
         else{
             alert('invalid fields')

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import avatar from '../../../images/avatar.png'
 import style from './chatBody.module.css'
 
@@ -7,15 +7,23 @@ import ContactMessage from './ContactMessage'
 import UserMessage from './UserMessage'
 import { useContextValue } from '../../../context/ContextProvider'
 
-function ChatBody() {
+function ChatBody({scrolBottom}) {
     const state=useContextValue()
     console.log(state);
-    const message ='Versions of the Lorem ipsum text have been used in typesetting at least since the 1960s, when it was popularized by advertisements for Letraset transfer sheets.[1] Lorem ipsum was introduced to the digital world in the mid-1980s, when Aldus employed it in graphic and word-processing templates for its desktop publishing program PageMaker. Other popular word processors, including Pages and Microsoft Word, have since adopted Lorem ipsum,[2] as have many LaTeX packages,[3][4][5] web content managers such as Joomla! and WordPress, and CSS libraries such as Semantic UI.[6]'
+    const {messages} = useContextValue()
+    console.log(messages);
     return (
-        <div className={style.chatContainer}>
-            <ContactMessage avatarSrc={avatar} alt='avatar' message={message}/>
-            <UserMessage avatarSrc={state.user.avatar} alt='avatar' message={message}/>
-            <ContactMessage avatarSrc={avatar} alt='avatar' message={message}/>
+        <div className={style.chatContainer} ref={scrolBottom}>
+            
+           {
+               messages.map((message,index)=>(
+                message.author.name===state.user.name?(
+                    <UserMessage date={message.date.split('T')[1].split('.')[0]} key={index} avatarSrc={message.author.avatar} alt={message.author.name} message={message.msg} name={message.author.name}/>
+                ):(
+                    <ContactMessage date={message.date.split('T')[1].split('.')[0]} key={index} avatarSrc={message.author.avatar} alt={message.author.name} message={message.msg} name={message.author.name}/>
+                )
+               ))
+           }
         </div>
     )
 }
