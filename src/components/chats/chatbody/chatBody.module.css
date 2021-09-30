@@ -1,6 +1,17 @@
+button{
+    background-color: transparent;
+    color: crimson;
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 3px;
+    margin: 4px;
+}
 .message{
     padding: 5px;
-    margin:  5px;
+    margin:  15px 15px;
     display: flex;
     border-radius: 8px;
     overflow-y: auto;
@@ -24,6 +35,10 @@
 }
 .userMessage div{
     text-align: right ;
+
+}
+.contactMessage div{
+    text-align: left ;
 
 }
 .message div span{

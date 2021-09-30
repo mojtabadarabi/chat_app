@@ -14,6 +14,10 @@ const reducer =(state,action)=>{
             const messagesArray=[...state.messages]
             messagesArray.push(action.message)
             return {...state,messages:messagesArray}
+        case 'deleteMessage':
+            console.log(state);
+            const filteredList=state.messages.filter(msg=>msg.id!==action.id)
+            return {...state,messages:filteredList}
         default:
             return state;
     }

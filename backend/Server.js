@@ -25,9 +25,8 @@ mySocket.on("connection", (socket) => {
     console.log(message);
     mySocket.emit("newMessage", {...message, date: new Date(), id: Math.floor(Math.random() * Math.pow(10, 7))});
   });
-  socket.on("deleteMsg", (id) => {
-    console.log(id);
-    mySocket.emit("deleteMsg",id);
+  socket.on("deletemessage", (id) => {
+    mySocket.emit("deletemessage",id);
   });
 
   socket.on("disconnect", () => {

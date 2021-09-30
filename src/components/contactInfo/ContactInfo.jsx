@@ -4,14 +4,14 @@ import avatar from '../../images/avatar.png'
 import {FiSmartphone} from 'react-icons/fi'
 import {MdEmail} from 'react-icons/md'
 
-import { useContextActions } from '../../context/ContextProvider'
+import { useContextActions, useContextValue } from '../../context/ContextProvider'
 
 function ContactInfo() {
-
+    const {user} = useContextValue()
     return (
         <section className={style.contactInfoContainer}>
                 <img src={avatar} alt="avatar" className={style.avatar}/>
-                <h3>Name LastName</h3>
+                <h3>{user.name} {user.lastName}</h3>
                 <div className={style.LinkInfo}>
                     <div >
                         <FiSmartphone/>
